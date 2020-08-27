@@ -16,6 +16,7 @@ mongoose.connect(process.env.URI,{
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 // need to set up routes
@@ -32,6 +33,11 @@ app.use((err, req, res, next) => {
     }
     return res.send({errMsg: err.message})
   })
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 
 app.listen(process.env.PORT || 9000, () => { 
     console.log("database connecting....")
