@@ -1,7 +1,7 @@
 {
   "name": "rockingthevote",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "The back end for rocking the vote",
   "main": "server.js",
   "author": "",
   "license": "ISC",
