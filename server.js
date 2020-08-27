@@ -4,6 +4,10 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require('express-jwt')
 require("dotenv").config()
+const path = require("path")
+
+const port = process.env.PORT || 9000;
+
 
 
 // connects to database on local machine, need to update to atlas cloud cluster
@@ -39,6 +43,6 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(process.env.PORT || 9000, () => { 
+app.listen(port, () => { 
     console.log("database connecting....")
 })
