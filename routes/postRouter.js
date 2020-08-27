@@ -1,7 +1,7 @@
 const express = require('express')
 const postsRouter = express.Router()
-const Posts = require("../rockingthevote/model/Posts.js")
-const Comment = require("../rockingthevote/model/Comments.js")
+const Posts = require("../model/Posts.js")
+const Comment = require("../model/Comments.js")
 
 
 
