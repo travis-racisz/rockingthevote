@@ -1,6 +1,6 @@
 const express = require('express')
 const authRouter = express.Router()
-const User = require('../../rockingthevote/model/Users')
+const User = require('../model/Users.js')
 const jwt = require("jsonwebtoken")
 
 
